@@ -1,0 +1,7 @@
+language: scala
+env:
+  global:
+    secure: VIzQ4YbobjZ1w4rzIw4wgbrAjPD01HpsOoDgEZH9NMdBvwcZwmrCbVrBWoVHWUyCPcgVPpjwCQbbAAX/ZtEZXWClzj8oR3E4gm0nEg6P7bhTdcOdYC36VCoWpHtlpUbF4V1dapcHtKpGgJ5/IWkFJ8CeKOPjGaHNFnHR1ys+hXE=
+before_install:
+- openssl aes-256-cbc -K $encrypted_9219c3988494_key -iv $encrypted_9219c3988494_iv
+  -in secring.gpg.enc -out secring.gpg -d
