@@ -11,12 +11,14 @@ libraryDependencies += "dom4j" % "dom4j" % "1.6.1"
 
 credentials += Credentials("Sonatype Nexus Repository",
 	       	           "oss.sonatype.org",
-			   System.getenv("SONATYPE_USER"),
-			   System.getenv("SONATYPE_PASSWORD"))
+			   sys.env.getOrElse("SONATYPE_USER", ""),
+			   sys.env.getOrElse("SONATYPE_PASSWORD", ""))
 
 pgpPublicRing := file("./pubring.gpg")
 
 pgpSecretRing := file("./secring.gpg")
+
+pgpPassphrase := sys.env.get("PGP_PASSPHRASE").map(_.toArray)
 
 licenses := Seq("BSD-Style" -> url("http://opensource.org/licenses/BSD-3-Clause"))
 
