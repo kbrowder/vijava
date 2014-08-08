@@ -1,11 +1,9 @@
 language: scala
 after_success:
 - sbt publishSigned
-env:
-  global:
-  - secure: VIzQ4YbobjZ1w4rzIw4wgbrAjPD01HpsOoDgEZH9NMdBvwcZwmrCbVrBWoVHWUyCPcgVPpjwCQbbAAX/ZtEZXWClzj8oR3E4gm0nEg6P7bhTdcOdYC36VCoWpHtlpUbF4V1dapcHtKpGgJ5/IWkFJ8CeKOPjGaHNFnHR1ys+hXE=
-  - secure: ohb0FPQ5BAp6cGGX5URdmyznAKfHE1b+OhW+LwJEbhlN1PtWsFlP+IFeSh5UUZfIljksqdKMC5/NsBVluPU8qpfSEBQYpFJlK6Qt9FWzFk/m/x0Pbl7JlJ7GduibbURmMkR/TT7+A84sc1vjLfoKoq5P7pqYZPihBhIECz6ho64=
-  - secure: nWcc2CrHzHcMCEPqtIcRFp2eLkAYx2BWp/CPcktMssbGHQvZ2lLtKoczj/lCnELBoMWgABEma9+2EUN3PK3/3haATsSuEuin3BEpLcK9MEQDOtT9Oi0G2pkCENMWC774ekwI8L/xL7hnCAfhR1+f5oK3g8dxuUzukYDBy2R9/oI=
 before_install:
 - openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv
   -in secring.gpg.enc -out secring.gpg -d
+env:
+  global:
+    secure: UtCZxCKVKwXI09EZTSCsfLRcjQszGjiy6vkM+Yw/EY8SfJRVynJdLglDg6QMQYFyvT5eR2iMde6ap8P6y+mIZU/kp8tmMyBUnt6rNQG+8ECzHVpHEYrHv2MuBYuWPvuL8JkVqC9p23KQCy7WV9C/m9qDQTpx0aF2i2Bsmpypidw=
