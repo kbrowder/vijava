@@ -3,7 +3,9 @@ after_success:
 - sbt publishSigned
 before_install:
 - openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv
+  -in sonatype.credentials.enc -out sonatype.credentials -d
+- openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv
   -in secring.gpg.enc -out secring.gpg -d
 env:
   global:
-    secure: UtCZxCKVKwXI09EZTSCsfLRcjQszGjiy6vkM+Yw/EY8SfJRVynJdLglDg6QMQYFyvT5eR2iMde6ap8P6y+mIZU/kp8tmMyBUnt6rNQG+8ECzHVpHEYrHv2MuBYuWPvuL8JkVqC9p23KQCy7WV9C/m9qDQTpx0aF2i2Bsmpypidw=
+    secure: PFLrJC5FsAOCwIzcQiGMZx1B4FFfrGmye+UppQFVhoSI3rWLu6XX7c/qKVYYVMxY9cGolxnRqwgrBiRbI/c0GerEhSpJJYaRvFUWpHpzcYL1BKVCLgXb5ANgcUVizyrQqfBVnUa7Ga3YX8AWTTH5QgQKkeHgA3c7KCIefAcW/7Q=

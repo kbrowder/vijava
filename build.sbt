@@ -9,10 +9,7 @@ name := "vijava"
 
 libraryDependencies += "dom4j" % "dom4j" % "1.6.1"
 
-credentials += Credentials("Sonatype Nexus Repository",
-	       	           "oss.sonatype.org",
-			   sys.env.getOrElse("SONATYPE_USER", ""),
-			   sys.env.getOrElse("SONATYPE_PASSWORD", ""))
+credentials += Credentials(file("sonatype.credentials"))
 
 pgpPublicRing := file("./pubring.gpg")
 
