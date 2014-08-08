@@ -53,4 +53,4 @@ tramp
 /auto/
 
 secring.gpg
-sonatype.credentials
+sonatype-credentials.txt

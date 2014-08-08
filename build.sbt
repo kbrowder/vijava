@@ -9,7 +9,7 @@ name := "vijava"
 
 libraryDependencies += "dom4j" % "dom4j" % "1.6.1"
 
-credentials += Credentials(file("sonatype.credentials"))
+credentials += Credentials(file("sonatype-credentials.txt"))
 
 pgpPublicRing := file("./pubring.gpg")
 

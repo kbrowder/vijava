@@ -1,11 +1,9 @@
 language: scala
 after_success:
 - sbt publishSigned
-before_install:
-- openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv
-  -in sonatype.credentials.enc -out sonatype.credentials -d
-- openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv
-  -in secring.gpg.enc -out secring.gpg -d
 env:
   global:
-    secure: PFLrJC5FsAOCwIzcQiGMZx1B4FFfrGmye+UppQFVhoSI3rWLu6XX7c/qKVYYVMxY9cGolxnRqwgrBiRbI/c0GerEhSpJJYaRvFUWpHpzcYL1BKVCLgXb5ANgcUVizyrQqfBVnUa7Ga3YX8AWTTH5QgQKkeHgA3c7KCIefAcW/7Q=
+    secure: UcrUWLs+/pruprbgh/ZeZY6gum0BuV4WWIf6BeFWqm6FV5Z3EgNAdUBmULm3W9RjUYF2jYbV7UvasHMI/0wZ+uPBpL+GVdKufUMWqasstKlhTR8Ar8gd0aOGP2wJPbKIweV+dUiH5sEC2Q+Yl2oIgSDtGmXqW+Tp/adz2ATHSeo=
+before_install:
+- openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv -in sonatype-credentials.txt.enc -out sonatype-credentials.txt -d
+- openssl aes-256-cbc -K $encrypted_6f00f9548c6c_key -iv $encrypted_6f00f9548c6c_iv -in secring.gpg.enc -out secring.gpg -d
